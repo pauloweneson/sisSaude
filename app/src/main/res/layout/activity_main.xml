@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="com.wps.guiamedico.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="290dp"
+        android:layout_height="226dp"
+        android:layout_gravity="center_horizontal"
+        app:srcCompat="@mipmap/imagem" />
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.07"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/tb_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress" />
+
+        <EditText
+            android:id="@+id/tb_senha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Senha"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/bt_entrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@android:color/holo_blue_light"
+            android:elevation="24dp"
+            android:onClick="buttonOnClick"
+            android:text="Entrar" />
+    </LinearLayout>
+</LinearLayout>
