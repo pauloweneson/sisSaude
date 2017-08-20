@@ -6,11 +6,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@android:color/white"
-    tools:context="com.wps.guiamedico.indexActivity">
+    tools:context="com.wps.guiamedico.indexActivity"
+    android:weightSum="1">
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Button" />
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="286dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal" />
 </LinearLayout>
