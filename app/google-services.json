@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "167700832335",
+    "firebase_url": "https://sissaude-f866d.firebaseio.com",
+    "project_id": "sissaude-f866d",
+    "storage_bucket": "sissaude-f866d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:167700832335:android:846d233853867022",
+        "android_client_info": {
+          "package_name": "com.wps.guiamedico.firebase.firebaseapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "167700832335-enfl8e9tue1kom6srqio9n0j19nfer8f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnC5UsWrlxwA8BLfqnrMKC-0Iq-0WqOZ4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

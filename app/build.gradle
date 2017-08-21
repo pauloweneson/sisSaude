@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "26.0.1"
     defaultConfig {
-        applicationId "com.wps.guiamedico"
+        applicationId "com.wps.guiamedico.firebase.firebaseapp"
         minSdkVersion 17
         targetSdkVersion 25
         versionCode 1
@@ -28,3 +28,5 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
 }
+
+apply plugin: 'com.google.gms.google-services'
