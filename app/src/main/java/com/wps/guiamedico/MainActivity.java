@@ -26,4 +26,8 @@ public class MainActivity extends AppCompatActivity {
         Intent telaCadastro = new Intent(MainActivity.this, cadastroActivity.class);
         startActivity(telaCadastro);
     }
+    public void linkEsqueciOnClick(View v) {
+        Intent telaEsqueci = new Intent(MainActivity.this, esqueciActivity.class);
+        startActivity(telaEsqueci);
+    }
 }

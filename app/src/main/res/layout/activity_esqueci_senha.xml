@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="50dp"
+        android:lineSpacingExtra="14sp"
+        android:text="Digite o email"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/recuperaEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
+    <Button
+        android:id="@+id/recuperar"
+        android:layout_width="match_parent"
+        android:onClick="btEsqueciEnviar"
+        android:layout_height="wrap_content"
+        android:text="Enviar" />
+    <Button
+        android:id="@+id/voltar"
+        android:layout_width="match_parent"
+        android:onClick="btVoltarOnClick"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="300dp"
+        android:text="Voltar" />
+
+</LinearLayout>
