@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.TextureView;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText senha;
     private FirebaseAuth mAuth;
     private TextView linkEsqueci;
-
+    private Button entrar;
 
 
     @Override
@@ -31,9 +32,23 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+
+
     public void buttonOnClick(View v) {
-        Intent telaIndex = new Intent(this,indexActivity.class);
-        startActivity(telaIndex);
+        email = (EditText)findViewById(R.id.tb_email);
+        senha = (EditText)findViewById(R.id.tb_senha);
+        entrar = (Button)findViewById(R.id.bt_entrar);
+        entrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(email.getText().toString().trim().length()>= 1 && senha.getText().toString().trim().length()>= 1){
+                    validarLogin();
+                }else {
+                    Toast.makeText(MainActivity.this,"Digite o usuário e senha!", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
     }
 
     public void linkCadastrarOnClick(View v) {
@@ -51,8 +66,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private void validarLogin(){
-        email = (EditText)findViewById(R.id.tb_email);
-        senha = (EditText)findViewById(R.id.tb_senha);
         mAuth = FirebaseAuth.getInstance();
         mAuth.signInWithEmailAndPassword(email.getText().toString(),senha.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
@@ -61,9 +74,12 @@ public class MainActivity extends AppCompatActivity {
                     Intent chamaTela = new Intent(MainActivity.this,indexActivity.class);
                     startActivity(chamaTela);
                     Toast.makeText(MainActivity.this,"Login efetuado com sucesso!", Toast.LENGTH_SHORT).show();
-                    finish();
                 }else{
+                    Intent chamaTela2 = new Intent(MainActivity.this,MainActivity.class);
+                    startActivity(chamaTela2);
                     Toast.makeText(MainActivity.this,"Usuário ou senha incorretos!", Toast.LENGTH_SHORT).show();
+
+
                 }
             }
         });

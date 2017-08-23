@@ -17,10 +17,10 @@
         app:srcCompat="@mipmap/imagem" />
 
     <LinearLayout
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.07"
+        android:layout_weight="0.64"
         android:orientation="vertical">
 
         <EditText
@@ -50,6 +50,13 @@
             android:text="Entrar" />
 
         <TextView
+            android:id="@+id/link_esqueci_senha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Esqueci a senha"
+            android:textSize="16dp" />
+
+        <TextView
             android:id="@+id/link_cadastrar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -61,13 +68,7 @@
             android:textSize="16dp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/link_esqueci_senha"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:textSize="16dp"
-            android:textStyle="bold" />
+
 
         <LinearLayout
             android:layout_width="match_parent"
