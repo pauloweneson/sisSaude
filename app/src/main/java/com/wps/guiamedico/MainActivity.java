@@ -75,11 +75,10 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(chamaTela);
                     Toast.makeText(MainActivity.this,"Login efetuado com sucesso!", Toast.LENGTH_SHORT).show();
                 }else{
-                    Intent chamaTela2 = new Intent(MainActivity.this,MainActivity.class);
-                    startActivity(chamaTela2);
+                    //Intent chamaTela2 = new Intent(MainActivity.this,MainActivity.class);
+                    //startActivity(chamaTela2);
+                    ((EditText)findViewById(R.id.tb_senha)).setText("");
                     Toast.makeText(MainActivity.this,"Usuário ou senha incorretos!", Toast.LENGTH_SHORT).show();
-
-
                 }
             }
         });
