@@ -4,10 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.support.v7.app.AlertDialog;
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
-
-import java.util.List;
 
 /**
  * Created by Apollo on 16/08/2017.
@@ -30,9 +26,5 @@ public class Funcoes {
                     }
                 });
         alert.show();
-    }
-
-    public void addItemSpinner(indexActivity classe, Spinner spinner, List<String> item) {
-        spinner.setAdapter(new ArrayAdapter<String>(classe, android.R.layout.simple_spinner_item,item));
     }
 }
