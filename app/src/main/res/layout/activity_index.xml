@@ -9,8 +9,32 @@
     tools:context="com.wps.guiamedico.indexActivity"
     android:weightSum="1">
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="286dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="Selecione a especialidade:"
+        android:textSize="20sp" />
+
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spinner_especialidade"
+        android:layout_width="286dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="286dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="Selecione UF:"
+        android:textSize="20sp" />
+
+    <Spinner
+        android:id="@+id/spinner_uf"
         android:layout_width="286dp"
         android:layout_height="40dp"
         android:layout_gravity="center_horizontal" />
