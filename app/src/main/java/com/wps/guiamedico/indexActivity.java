@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class indexActivity extends AppCompatActivity {
-    List<String> list;
+    List<String> listEspecialidades;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Funcoes funcoes = new Funcoes();
@@ -16,12 +16,12 @@ public class indexActivity extends AppCompatActivity {
         setContentView(R.layout.activity_index);
 
         /*Para adicionar item no Spinner*/
-        list = new ArrayList();
-        list.add("Ginecologia");
-        list.add("Dermatologia");
-        list.add("Psiquiatria");
+        listEspecialidades = new ArrayList();
+        listEspecialidades.add("Ginecologia");
+        listEspecialidades.add("Dermatologia");
+        listEspecialidades.add("Psiquiatria");
 
-        funcoes.addItemSpinner(this, (Spinner) findViewById(R.id.spinner),list);
+        funcoes.addItemSpinner(this, (Spinner) findViewById(R.id.spinner_especialidade), listEspecialidades);
         /*Fim adicionar item no Spinner*/
     }
 }
