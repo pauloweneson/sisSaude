@@ -18,10 +18,11 @@
 
     <LinearLayout
         android:layout_width="290dp"
-        android:layout_height="wrap_content"
+        android:layout_height="223dp"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.64"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:layout_weight="0.82">
 
         <EditText
             android:id="@+id/tb_email"
@@ -51,28 +52,19 @@
 
         <TextView
             android:id="@+id/link_esqueci_senha"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Esqueci a senha"
-            android:textSize="16dp" />
-
-        <TextView
-            android:id="@+id/link_cadastrar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:onClick="linkCadastrarOnClick"
-            android:text="Cadastre-se agora"
-            android:textColor="@android:color/holo_red_light"
-            android:textColorLink="@android:color/holo_red_light"
-            android:textSize="16dp"
-            android:textStyle="bold" />
-
+            android:onClick="esqueciOnClick"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="70dp"
+            android:text="Esqueci a senha"
+            android:textSize="16dp" />
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
             <Button
@@ -97,6 +89,18 @@
                 android:text="I" />
 
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/link_cadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="10dp"
+            android:onClick="linkCadastrarOnClick"
+            android:text="Cadastre-se agora"
+            android:textSize="16dp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 

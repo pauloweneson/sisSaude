@@ -21,7 +21,7 @@ public class indexActivity extends AppCompatActivity {
         list.add("Dermatologia");
         list.add("Psiquiatria");
 
-        funcoes.addItemSpinner(this, (Spinner) findViewById(R.id.spinner),list);
+        //funcoes.addItemSpinner(this, (Spinner) findViewById(R.id.spinner),list);
         /*Fim adicionar item no Spinner*/
     }
 }
