@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Guia Medico</string>
+    <string name="digite_o_e_mail_para_recupera_o">Digite o e-mail para recuperação</string>
+    <string name="enviar">Enviar</string>
 </resources>
