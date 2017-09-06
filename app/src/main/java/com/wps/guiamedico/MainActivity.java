@@ -66,22 +66,23 @@ public class MainActivity extends AppCompatActivity {
 
     }
     private void validarLogin(){
-        /*mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
         mAuth.signInWithEmailAndPassword(email.getText().toString(),senha.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){*/
-                if(true){
-                    Toast.makeText(MainActivity.this,"Login efetuado com sucesso!", Toast.LENGTH_SHORT).show();
-                    Intent chamaTela = new Intent(MainActivity.this,indexActivity.class);
-                    startActivity(chamaTela);
-                }else{
-                    //Intent chamaTela2 = new Intent(MainActivity.this,MainActivity.class);
-                    //startActivity(chamaTela2);
-                    ((EditText)findViewById(R.id.tb_senha)).setText("");
-                    Toast.makeText(MainActivity.this,"Usuário ou senha incorretos!", Toast.LENGTH_SHORT).show();
+                if(task.isSuccessful()){
+                    if(true){
+                        Toast.makeText(MainActivity.this,"Login efetuado com sucesso!", Toast.LENGTH_SHORT).show();
+                        Intent chamaTela = new Intent(MainActivity.this,indexActivity.class);
+                        startActivity(chamaTela);
+                    }else{
+                        Intent chamaTela2 = new Intent(MainActivity.this,MainActivity.class);
+                        startActivity(chamaTela2);
+                        ((EditText)findViewById(R.id.tb_senha)).setText("");
+                        Toast.makeText(MainActivity.this,"Usuário ou senha incorretos!", Toast.LENGTH_SHORT).show();
+                    }
                 }
-            /*}
-        });*/
+            }
+        });
     }
 }
