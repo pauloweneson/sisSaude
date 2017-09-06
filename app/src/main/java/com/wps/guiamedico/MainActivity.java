@@ -61,6 +61,9 @@ public class MainActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     Intent chamaTela = new Intent(MainActivity.this,indexActivity.class);
+                /*if(true){
+                    Intent chamaTela = new Intent(MainActivity.this,MapsActivity.class);
+                    chamaTela.putExtra("numero",1234);*/
                     startActivity(chamaTela);
                     Toast.makeText(MainActivity.this,"Login efetuado com sucesso!", Toast.LENGTH_SHORT).show();
                 }else{

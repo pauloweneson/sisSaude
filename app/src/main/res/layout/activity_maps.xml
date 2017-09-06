@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="com.wps.guiamedico.MapsActivity">
+
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/tx_local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Hospital Santa Luzia"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/tx_telefone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Tel.: (61) 3445-6000"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/tx_endereco"
+            android:layout_width="319dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Endereço: Shls 716, Conjunto E, Lote 05 - Asa Sul, Brasília - DF, 70390-903"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp" />
+
+</LinearLayout>

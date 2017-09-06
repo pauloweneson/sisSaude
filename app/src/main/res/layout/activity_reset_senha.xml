@@ -7,35 +7,45 @@
     android:weightSum="1"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="                              Digite o e-mail para recuperação" />
-
-
-    <EditText
-        android:id="@+id/emailRecuperar"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:ems="10"
-        android:inputType="textEmailAddress" />
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:weightSum="1">
 
-    <Button
-        android:id="@+id/btnRecuperar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:onClick="btnRecuperarOnClick"
-        android:text="Recuperar" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="286dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="left|right"
+            android:text="Digite o e-mail para recuperação" />
 
-    <Button
-        android:id="@+id/btnVoltar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:onClick="btnVoltarOnClick"
-        android:text="Voltar" />
+
+        <EditText
+            android:id="@+id/emailRecuperar"
+            android:layout_width="286dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:inputType="textEmailAddress" />
+
+        <Button
+            android:id="@+id/btnRecuperar"
+            android:layout_width="286dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:onClick="btnRecuperarOnClick"
+            android:text="Recuperar" />
+
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:onClick="btnVoltarOnClick"
+            android:text="Voltar" />
+    </LinearLayout>
 </LinearLayout>
