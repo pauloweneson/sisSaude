@@ -18,12 +18,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
-    private TextView linkCadastrar;
     private EditText email;
     private EditText senha;
-    private FirebaseAuth mAuth;
-    private TextView linkEsqueci;
-    private Button entrar;
 
 
     @Override
@@ -32,12 +28,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-
-
     public void buttonOnClick(View v) {
         email = (EditText)findViewById(R.id.tb_email);
         senha = (EditText)findViewById(R.id.tb_senha);
-        entrar = (Button)findViewById(R.id.bt_entrar);
+        Button entrar = (Button) findViewById(R.id.bt_entrar);
         entrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,33 +49,25 @@ public class MainActivity extends AppCompatActivity {
         Intent telaCadastro = new Intent(MainActivity.this, cadastroActivity.class);
         startActivity(telaCadastro);
     }
-    public void esqueci() {
-        linkEsqueci.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent telaEsqueci = new Intent(MainActivity.this, esqueciActivity.class);
-                startActivity(telaEsqueci);
-            }
-        });
-
+    public void esqueciOnClick (View v){
+        Intent telaEsqueci = new Intent(this, resetSenhaActivity.class);
+        startActivity(telaEsqueci);
     }
+
     private void validarLogin(){
-        /*mAuth = FirebaseAuth.getInstance();
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
         mAuth.signInWithEmailAndPassword(email.getText().toString(),senha.getText().toString()).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                if(task.isSuccessful()){*/
-                if(true){
-                    Toast.makeText(MainActivity.this,"Login efetuado com sucesso!", Toast.LENGTH_SHORT).show();
+                if(task.isSuccessful()){
                     Intent chamaTela = new Intent(MainActivity.this,indexActivity.class);
                     startActivity(chamaTela);
+                    Toast.makeText(MainActivity.this,"Login efetuado com sucesso!", Toast.LENGTH_SHORT).show();
                 }else{
-                    //Intent chamaTela2 = new Intent(MainActivity.this,MainActivity.class);
-                    //startActivity(chamaTela2);
                     ((EditText)findViewById(R.id.tb_senha)).setText("");
                     Toast.makeText(MainActivity.this,"Usuário ou senha incorretos!", Toast.LENGTH_SHORT).show();
                 }
-            /*}
-        });*/
+            }
+        });
     }
 }
