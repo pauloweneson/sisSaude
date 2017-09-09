@@ -80,7 +80,7 @@ public class AdapterIndex extends RecyclerView.Adapter<AdapterIndex.ViewHolder> 
             }
         });
 
-        holder.txtFooter.setText("Footer: " + name.getCodUnidade());
+        holder.txtFooter.setText("Telefone: " + name.getTelefone());
     }
 
     // Return the size of your dataset (invoked by the layout manager)

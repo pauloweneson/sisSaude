@@ -7,30 +7,30 @@ import com.google.gson.annotations.SerializedName;
  */
 
 public class Estabelecimento {
-    private int codUnidade;
+    private String codUnidade;
     private String nomeFantasia;
     private String descricaoCompleta;
     private String telefone;
     private String logradouro;
     private String bairro;
-    private int numero;
+    private String numero;
     private String uf;
     private String cep;
     private String turnoAtendimento;
     @SerializedName("long")
-    private String longitude;
-    private String lat;
+    private Float longitude;
+    private Float lat;
 
     //Construtor
     public Estabelecimento() {
     }
 
     //getters e setters
-    public int getCodUnidade() {
+    public String getCodUnidade() {
         return codUnidade;
     }
 
-    public void setCodUnidade(int codUnidade) {
+    public void setCodUnidade(String codUnidade) {
         this.codUnidade = codUnidade;
     }
 
@@ -74,11 +74,11 @@ public class Estabelecimento {
         this.bairro = bairro;
     }
 
-    public int getNumero() {
+    public String getNumero() {
         return numero;
     }
 
-    public void setNumero(int numero) {
+    public void setNumero(String numero) {
         this.numero = numero;
     }
 
@@ -98,19 +98,19 @@ public class Estabelecimento {
         this.turnoAtendimento = turnoAtendimento;
     }
 
-    public String getLongitude() {
+    public Float getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(String longitude) {
+    public void setLongitude(Float longitude) {
         this.longitude = longitude;
     }
 
-    public String getLat() {
+    public Float getLat() {
         return lat;
     }
 
-    public void setLat(String lat) {
+    public void setLat(Float lat) {
         this.lat = lat;
     }
 
