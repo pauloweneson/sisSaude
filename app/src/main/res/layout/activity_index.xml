@@ -9,6 +9,14 @@
     tools:context="com.wps.guiamedico.indexActivity"
     android:weightSum="1">
 
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:onClick="btnLogout"
+        />
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="286dp"
@@ -39,9 +47,9 @@
         android:layout_height="40dp"
         android:layout_gravity="center_horizontal" />
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent">
 
         <!-- A RecyclerView with some commonly used attributes -->
 

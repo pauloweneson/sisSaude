@@ -11,8 +11,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="290dp"
-        android:layout_height="226dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_gravity="center_horizontal"
         app:srcCompat="@mipmap/imagem" />
 
@@ -42,9 +42,10 @@
 
         <Button
             android:id="@+id/bt_entrar"
+            style="?android:textAppearanceSmall"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
             android:background="@android:color/holo_blue_light"
             android:elevation="24dp"
             android:onClick="buttonOnClick"
@@ -55,7 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="esqueciOnClick"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:layout_marginStart="70dp"
             android:text="Esqueci a senha"
             android:textSize="16dp" />
@@ -64,29 +65,25 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
+            android:layout_marginTop="1dp"
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/bt_google"
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/signInButton"
+                style="?android:textAppearanceSmall"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="G" />
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="1dp" />
 
-            <Button
-                android:id="@+id/bt_facebook"
-                android:layout_width="match_parent"
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/login_button"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="F" />
-
-            <Button
-                android:id="@+id/bt_instagram"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="I" />
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp" />
 
         </LinearLayout>
 
@@ -96,7 +93,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="right"
             android:layout_marginStart="70dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="5dp"
             android:onClick="linkCadastrarOnClick"
             android:text="Cadastre-se agora"
             android:textSize="16dp"

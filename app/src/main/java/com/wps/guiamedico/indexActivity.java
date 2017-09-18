@@ -1,15 +1,20 @@
 package com.wps.guiamedico;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.wps.guiamedico.Adapter.AdapterIndex;
 import com.wps.guiamedico.Interfaces.InterfaceRetrofit;
 import com.wps.guiamedico.Model.Estabelecimento;
@@ -26,15 +31,19 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class indexActivity extends AppCompatActivity {
     List<String> listEspecialidades;
-    //private ContactRecyclerViewAdapter recycleViewAdapter;
+    private static final String TAG = indexActivity.class.getSimpleName();
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager mLayoutManeger;
+    private FirebaseAuth mAuth;
+    private FirebaseUser user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Funcoes funcoes = new Funcoes();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_index);
+        mAuth = FirebaseAuth.getInstance();
+        user = FirebaseAuth.getInstance().getCurrentUser();
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
         recyclerView.setHasFixedSize(true);
         mLayoutManeger = new LinearLayoutManager(this);
@@ -57,7 +66,7 @@ public class indexActivity extends AppCompatActivity {
                     for(Estabelecimento estabelecimento : response.body())
                         le.add(estabelecimento);
 
-                    recyclerView.setAdapter(new AdapterIndex(le));
+                    recyclerView.setAdapter(new AdapterIndex(le,indexActivity.this));
 
                     Log.e("RESPOSTA", "Sucesso. Boa muleke!");
                 }
@@ -80,39 +89,13 @@ public class indexActivity extends AppCompatActivity {
 
         funcoes.addItemSpinner(this, (Spinner) findViewById(R.id.spinner_especialidade), listEspecialidades);
         /*Fim adicionar item no Spinner*/
-
-
     }
+    public void btnLogout (View v){
 
-    private class ContactViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-        public TextView secondLine;
-
-        public ContactViewHolder(View itemView) {
-            super(itemView);
-        }
-
-        @Override
-        public void onClick(View v) {
-
-        }
+        Log.d(TAG, "logout:");
+        mAuth.getInstance().signOut();
+        FirebaseAuth.getInstance().signOut();
+        finish();
     }
-
-    private class ContactRecyclerViewAdapter extends RecyclerView.Adapter<ContactViewHolder> {
-        @Override
-        public ContactViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            return null;
-        }
-
-        @Override
-        public void onBindViewHolder(ContactViewHolder holder, int position) {
-
-        }
-
-        @Override
-        public int getItemCount() {
-            return 0;
-        }
-    }
-
 
 }

@@ -2,4 +2,9 @@
     <string name="app_name">Guia Medico</string>
     <string name="digite_o_e_mail_para_recupera_o">Digite o e-mail para recuperação</string>
     <string name="enviar">Enviar</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="action_sign_in_facebook">Sign in com Facebook</string>
+    <string name="facebook_app_id">1877546889240515</string>
+    <string name="fb_login_protocol_scheme">fb1877546889240515</string>
 </resources>
