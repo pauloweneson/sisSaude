@@ -29,7 +29,8 @@ import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class indexActivity extends AppCompatActivity {
+public class indexActivity extends AppCompatActivity
+{
     List<String> listEspecialidades;
     private static final String TAG = indexActivity.class.getSimpleName();
     private RecyclerView recyclerView;

@@ -44,7 +44,8 @@ public class AdapterIndex extends RecyclerView.Adapter<AdapterIndex.ViewHolder> 
         public RelativeLayout txtLinha;
         public View layout;
 
-        public ViewHolder(View v) {
+        public ViewHolder(View v)
+        {
             super(v);
             layout = v;
             txtLinha = (RelativeLayout) v.findViewById(R.id.linha);

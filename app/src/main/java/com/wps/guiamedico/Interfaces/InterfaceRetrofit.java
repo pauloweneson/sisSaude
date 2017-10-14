@@ -11,7 +11,8 @@ import retrofit2.http.GET;
  * Created by lemue on 03/09/2017.
  */
 
-public interface InterfaceRetrofit {
+public interface InterfaceRetrofit
+{
     String ENDPOINT = "http://mobile-aceite.tcu.gov.br/mapa-da-saude/";
 
     @GET("rest/estabelecimentos")

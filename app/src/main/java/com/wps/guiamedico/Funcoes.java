@@ -13,7 +13,8 @@ import java.util.List;
  * Created by Apollo on 16/08/2017.
  */
 
-public class Funcoes {
+public class Funcoes
+{
 
     public Funcoes() {}
 
