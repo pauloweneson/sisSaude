@@ -76,6 +76,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
                     Intent intent = new Intent(MainActivity.this, indexActivity.class);
                     startActivity(intent);
+                    finish();
 
                 } else {
                     // User is signed out
@@ -204,6 +205,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                         Log.d(TAG, "signInWithCredentialFacebook:onComplete:" + task.isSuccessful());
                         Intent intent = new Intent(MainActivity.this, indexActivity.class);
                         startActivity(intent);
+                        finish();
                         // [START_EXCLUDE]
                         // [END_EXCLUDE]
                     }
