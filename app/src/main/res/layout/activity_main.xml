@@ -1,105 +1,139 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="@color/cardview_light_background"
+    android:fadeScrollbars="false"
     android:orientation="vertical"
-    android:weightSum="1"
     tools:context="com.wps.guiamedico.MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_gravity="center_horizontal"
-        app:srcCompat="@mipmap/imagem" />
-
-    <LinearLayout
-        android:layout_width="290dp"
-        android:layout_height="223dp"
-        android:layout_gravity="center_horizontal"
-        android:orientation="vertical"
-        android:weightSum="1"
-        android:layout_weight="0.82">
-
-        <EditText
-            android:id="@+id/tb_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="E-mail"
-            android:inputType="textEmailAddress" />
-
-        <EditText
-            android:id="@+id/tb_senha"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Senha"
-            android:inputType="textPassword" />
-
-        <Button
-            android:id="@+id/bt_entrar"
-            style="?android:textAppearanceSmall"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:background="@android:color/holo_blue_light"
-            android:elevation="24dp"
-            android:onClick="buttonOnClick"
-            android:text="Entrar" />
-
-        <TextView
-            android:id="@+id/link_esqueci_senha"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="esqueciOnClick"
-            android:layout_marginTop="5dp"
-            android:layout_marginStart="70dp"
-            android:text="Esqueci a senha"
-            android:textSize="16dp" />
-
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rodape"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="1dp"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/rodape"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
             android:orientation="vertical">
 
-            <com.google.android.gms.common.SignInButton
-                android:id="@+id/signInButton"
-                style="?android:textAppearanceSmall"
+            <ImageView
+                android:id="@+id/imageView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:layout_marginTop="1dp" />
-
-            <com.facebook.login.widget.LoginButton
-                android:id="@+id/login_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="200dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="30dp"
-                />
+                android:layout_weight="0.82"
+                app:srcCompat="@mipmap/imagem" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="298dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <Button
+                    android:id="@+id/button0"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorPrimary"
+                    android:elevation="0dp" />
+
+                <EditText
+                    android:id="@+id/tb_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="E-mail"
+                    android:inputType="textEmailAddress" />
+
+                <EditText
+                    android:id="@+id/tb_senha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Senha"
+                    android:inputType="textPassword" />
+
+                <Button
+                    android:id="@+id/bt_entrar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/roundedbuttonazul"
+                    android:elevation="24dp"
+                    android:onClick="buttonOnClick"
+                    android:text="Entrar"
+                    android:textColor="@android:color/background_light" />
+
+                <TextView
+                    android:id="@+id/link_esqueci_senha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:onClick="esqueciOnClick"
+                    android:text="Esqueci a senha"
+                    android:textColor="?attr/actionModeSplitBackground"
+                    android:textSize="16dp" />
+
+                <com.google.android.gms.common.SignInButton
+                    android:id="@+id/signInButton"
+                    style="?android:textAppearanceSmall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="1dp" />
+
+                <com.facebook.login.widget.LoginButton
+                    android:id="@+id/login_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp" />
+
+                <TextView
+                    android:id="@+id/link_cadastrar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:onClick="linkCadastrarOnClick"
+                    android:text="Cadastre-se agora"
+                    android:textColor="?attr/actionModeSplitBackground"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
         </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/rodape"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#dadada"
+        android:gravity="center_vertical"
+        android:padding="10dip">
 
         <TextView
-            android:id="@+id/link_cadastrar"
-            android:layout_width="match_parent"
+            android:id="@+id/texto2"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginStart="70dp"
-            android:layout_marginTop="5dp"
-            android:onClick="linkCadastrarOnClick"
-            android:text="Cadastre-se agora"
-            android:textSize="16dp"
-            android:textStyle="bold" />
-
+            android:gravity="center_horizontal"
+            android:text="Copyright © - LPW 2017"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>
