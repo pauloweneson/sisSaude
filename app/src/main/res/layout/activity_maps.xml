@@ -40,6 +40,33 @@
             android:layout_marginTop="10dp"
             android:textSize="16dp" />
 
+        <EditText
+            android:id="@+id/tx_message"
+            android:layout_width="319dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="16dp"
+            android:inputType="text"
+            />
+
+        <Button
+            android:id="@+id/bt_salvar"
+            android:layout_width="319dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:onClick="buttonOnClick"
+            android:text="Salvar"
+            android:textColor="@android:color/background_light" />
+
+        <TextView
+            android:id="@+id/tx_teste"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:textSize="16dp" />
+
     </LinearLayout>
 
     <fragment
