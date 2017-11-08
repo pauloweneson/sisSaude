@@ -59,6 +59,7 @@
                     android:hint="E-mail"
                     android:inputType="textEmailAddress" />
 
+
                 <EditText
                     android:id="@+id/tb_senha"
                     android:layout_width="match_parent"
@@ -72,11 +73,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/roundedbuttonazul"
                     android:elevation="24dp"
                     android:onClick="buttonOnClick"
                     android:text="Entrar"
                     android:textColor="@android:color/background_light" />
+                    <!--android:background="@drawable/roundedbuttonazul"-->
+
 
                 <TextView
                     android:id="@+id/link_esqueci_senha"
