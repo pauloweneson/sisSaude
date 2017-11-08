@@ -75,10 +75,9 @@
                     android:layout_marginTop="5dp"
                     android:elevation="24dp"
                     android:onClick="buttonOnClick"
+                    android:background="@drawable/roundedbuttonazul"
                     android:text="Entrar"
                     android:textColor="@android:color/background_light" />
-                    <!--android:background="@drawable/roundedbuttonazul"-->
-
 
                 <TextView
                     android:id="@+id/link_esqueci_senha"

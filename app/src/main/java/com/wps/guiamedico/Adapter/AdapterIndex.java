@@ -90,6 +90,7 @@ public class AdapterIndex extends RecyclerView.Adapter<AdapterIndex.ViewHolder> 
                 //Toast.makeText(pagina,name.getNomeFantasia().toString(), Toast.LENGTH_SHORT).show();
                 Intent chamaTela = new Intent(pagina,MapsActivity.class);
                 chamaTela.putExtra("nome",name.getNomeFantasia().toString());
+                chamaTela.putExtra("CodCnes",String.valueOf(name.getCodCnes()));
                 chamaTela.putExtra("telefone","Telefone: " + name.getTelefone());
                 chamaTela.putExtra("endereco",name.getLogradouro() + ", " + name.getBairro() +" - " + name.getUf() + ", " +  name.getCep());
                 chamaTela.putExtra("latitude",Float.toString(name.getLat()));

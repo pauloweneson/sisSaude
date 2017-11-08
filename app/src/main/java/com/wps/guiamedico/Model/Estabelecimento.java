@@ -7,6 +7,7 @@ import com.google.gson.annotations.SerializedName;
  */
 
 public class Estabelecimento {
+    private Long codCnes;
     private String codUnidade;
     private String nomeFantasia;
     private String descricaoCompleta;
@@ -120,5 +121,13 @@ public class Estabelecimento {
 
     public void setCep(String cep) {
         this.cep = cep;
+    }
+
+    public Long getCodCnes() {
+        return codCnes;
+    }
+
+    public void setCodCnes(Long codCnes) {
+        this.codCnes = codCnes;
     }
 }
