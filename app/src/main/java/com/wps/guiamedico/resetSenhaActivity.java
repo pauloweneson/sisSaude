@@ -3,9 +3,12 @@ package com.wps.guiamedico;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -19,6 +22,13 @@ public class resetSenhaActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reset_senha);
+
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.action_bar);
+        TextView txTitle = (TextView)findViewById(R.id.txTitle);
+        txTitle.setText("Esqueci Senha");
+        ImageView btLogoff = (ImageView)findViewById(R.id.btLogoff);
+        btLogoff.setVisibility(View.INVISIBLE);
     }
 
     public void btnVoltarOnClick(View v) {

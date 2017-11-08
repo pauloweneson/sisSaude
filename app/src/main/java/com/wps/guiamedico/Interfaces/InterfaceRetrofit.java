@@ -6,6 +6,7 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Query;
 
 /**
  * Created by lemue on 03/09/2017.
@@ -14,7 +15,7 @@ import retrofit2.http.GET;
 public interface InterfaceRetrofit
 {
     String ENDPOINT = "http://mobile-aceite.tcu.gov.br/mapa-da-saude/";
-
     @GET("rest/estabelecimentos")
-    Call<List<Estabelecimento>> callListEstabelecimentos();
+    //Call<List<Estabelecimento>> callListEstabelecimentos();
+    Call<List<Estabelecimento>> callListEstabelecimentos(@Query("uf") String tags);
 }

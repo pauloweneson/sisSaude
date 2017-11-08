@@ -34,6 +34,6 @@ public class Funcoes
     }
 
     public void addItemSpinner(indexActivity classe, Spinner spinner, List<String> item) {
-        spinner.setAdapter(new ArrayAdapter<String>(classe, android.R.layout.simple_spinner_item,item));
+        spinner.setAdapter(new ArrayAdapter<String>(classe, android.R.layout.simple_spinner_dropdown_item,item));
     }
 }

@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.NonNull;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.view.TextureView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -55,8 +57,15 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //Variáveis de ambiente
         setContentView(R.layout.activity_main);
+
+        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.action_bar);
+        TextView txTitle = (TextView)findViewById(R.id.txTitle);
+        txTitle.setText("SisSaúde");
+        ImageView btLogoff = (ImageView)findViewById(R.id.btLogoff);
+        btLogoff.setVisibility(View.INVISIBLE);
+
         email = (EditText)findViewById(R.id.tb_email);
         senha = (EditText)findViewById(R.id.tb_senha);
         mAuth = FirebaseAuth.getInstance();
@@ -83,7 +92,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                     // User is signed out
                     Log.d(TAG, "onAuthStateChanged:signed_out");
                 }
-
             }
         };
 
